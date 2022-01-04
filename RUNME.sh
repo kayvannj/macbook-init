@@ -1,8 +1,7 @@
 cd ~
 mkdir Development
-cd Development
-mkdir Repos
-git clone git@github.com:kayvannj/macbook-init.git
+mkdir Development/Repos
+# git clone git@github.com:kayvannj/macbook-init.git
 
 
 #install brew
