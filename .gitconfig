@@ -1,0 +1,39 @@
+[alias]
+	s = status
+	co = checkout
+	c = commit
+	st = stash
+	b = branch
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\\ %Cgreen%ar\\ " --decorate
+	conf = "!code ~/.gitconfig"
+	cleanf = clean -df
+	rc = rebase --continue
+	ra = rebase --abort
+	ri = rebase -i
+	rm = rebase master
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+[core]
+	autocrlf = input
+	editor = vim
+	excludesfile = /Users/kayvann/.gitignore
+	untrackedCache = true
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+	renameLimit = 894
